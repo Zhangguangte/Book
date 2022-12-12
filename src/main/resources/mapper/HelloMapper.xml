@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.HelloMapper" >
+    <resultMap id="BaseResultMap" type="com.example.demo.bean.Book" >
+        <id column="bid" property="bid" jdbcType="INTEGER" />
+        <result column="bname" property="bname" jdbcType="VARCHAR" />
+        <result column="nprice" property="nprice"/>
+    </resultMap>
+
+    <select id="selectOne"  resultMap="BaseResultMap" >
+        SELECT * FROM book
+    </select>
+
+</mapper>
